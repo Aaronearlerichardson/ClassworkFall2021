@@ -23,9 +23,8 @@ def main():
     patient = get_patient(db, patient_id_tested)
     patient[3].append(test_done)
     
-    db = pd.Dataframe(db)
-    var = pd.Dataframe
-
+    db = pd.DataFrame(db)
+    print(db)
     print_database(db)
 
 
