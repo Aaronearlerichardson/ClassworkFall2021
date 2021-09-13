@@ -39,7 +39,9 @@ def dl_input(stat):
 
 
 def dl_output(stat, DL_value, DL_answer):
-    print("The {} value of {} is considered {}".format(stat, DL_value, DL_answer))
+    print("The {} value of {} is considered {}".format(stat,
+                                                       DL_value,
+                                                       DL_answer))
     return
 
 
