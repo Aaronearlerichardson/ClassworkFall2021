@@ -1,3 +1,5 @@
+from BMI import bmi_calc, get_inputs, utils
+
 print("this is the blood_calc.py module")
 print("It's name is {} ".format(__name__))
 
@@ -10,6 +12,7 @@ def interface():
         print("1 - HDL analysis")
         print("2 - LDL analysis")
         print("3 - cholesterol analysis")
+        print("4 - BMI calculation")
         print("9 - Quit")
         choice = input("Make a choice:\n")
         if not choice.isnumeric():
@@ -24,6 +27,8 @@ def interface():
             LDL_driver()
         elif choice == 3:
             cholesterol_driver()
+        elif choice == 4:
+            bmi_calc.bmi_main()
     return
 
 
