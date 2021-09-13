@@ -1,5 +1,5 @@
-from get_inputs import get_height_input, get_weight_input
-from utils import print_results, imp2si, sig_fig_round
+from BMI.get_inputs import get_height_input, get_weight_input
+from BMI.utils import print_results, imp2si, sig_fig_round
 
 
 def bmi_calc(weight, height):

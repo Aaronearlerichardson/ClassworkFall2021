@@ -1,4 +1,4 @@
-from BMI import bmi_calc, get_inputs, utils
+from BMI import bmi_calc
 
 print("this is the blood_calc.py module")
 print("It's name is {} ".format(__name__))
