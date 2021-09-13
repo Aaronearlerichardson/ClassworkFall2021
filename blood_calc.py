@@ -39,7 +39,9 @@ def dl_input(stat):
 
 
 def dl_output(stat, DL_value, DL_answer):
-    print("The {} value of {} is considered {}".format(stat, DL_value, DL_answer))
+    print("The {} value of {} is considered {}".format(stat,
+                                                       DL_value,
+                                                       DL_answer))
     return
 
 
@@ -47,7 +49,7 @@ def hdl_eval(HDL_value):
     if HDL_value >= 60:
         return "Normal"
     elif 40 <= HDL_value < 60:
-        return "Borderline_low"
+        return "Borderline low"
     else:
         return "Low"
 

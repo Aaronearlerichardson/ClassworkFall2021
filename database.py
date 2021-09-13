@@ -1,7 +1,7 @@
+import blood_calc as bc
+
 print("this is the database.py module")
 print("It's name is {} ".format(__name__))
-
-import blood_calc as bc
 
 answer = bc.hdl_eval(55)
 
