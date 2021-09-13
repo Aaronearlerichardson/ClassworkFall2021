@@ -47,7 +47,7 @@ def hdl_eval(HDL_value):
     if HDL_value >= 60:
         return "Normal"
     elif 40 <= HDL_value < 60:
-        return "Borderline_low"
+        return "Borderline low"
     else:
         return "Low"
 
