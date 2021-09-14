@@ -1,5 +1,4 @@
 
-
 def is_numeric(num):
     try:
         float(num)
@@ -8,12 +7,12 @@ def is_numeric(num):
         return False
 
 
-def get_new_y(tupe_1: tuple, tupe_2: tuple, new_x):
+def get_new_y(coords_1: tuple, coords_2: tuple, new_x):
 
-    assert len(tupe_1) == 2
-    x1, y1 = tupe_1[:]
-    assert len(tupe_2) == 2
-    x2, y2 = tupe_2[:]
+    assert len(coords_1) == 2
+    x1, y1 = coords_1[:]
+    assert len(coords_2) == 2
+    x2, y2 = coords_2[:]
     for i in (x1, y1, x2, y2, new_x):
         assert is_numeric(i)
     assert x1 != x2
@@ -23,3 +22,11 @@ def get_new_y(tupe_1: tuple, tupe_2: tuple, new_x):
     new_y = m * new_x + b
 
     return new_y
+
+
+def check_third(coords_1: tuple, coords_2: tuple, check_coords: tuple):
+    expected_y = get_new_y(coords_1, coords_2, check_coords[0])
+    if expected_y == check_coords[1]:
+        return True
+    else:
+        return False
