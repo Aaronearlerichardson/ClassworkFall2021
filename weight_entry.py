@@ -1,3 +1,6 @@
+from x_to_y import is_numeric
+
+
 def input_weight_entry():
     print("Enter patient weight in form of ## units (e.g., 105.3 lb)")
     weight_input = input("Enter weight: ")
@@ -8,7 +11,12 @@ def input_weight_entry():
 
 def parse_weight_input(weight_input):
     weight, units = weight_input.split(' ')
-    weight = int(weight)
+
+    if not is_numeric(weight):
+        return False
+    weight = float(weight)
+    units = units.lower()
+    units = units.rstrip('s')
     if units == "lb":
         weight_kg = convert_lb_to_kg(weight)
     else:
@@ -24,4 +32,3 @@ def convert_lb_to_kg(weight_lb):
 
 if __name__ == "__main__":
     input_weight_entry()
-
