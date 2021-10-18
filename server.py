@@ -29,6 +29,20 @@ def hdl_analysis(hdl_value):
     return jsonify(answer), 201
 
 
+@app.route("/hdl", methods=["POST"])
+def hdl_analysis(hdl_value):
+    """
+    Input should look like {"hdl": 50, "patient_id": 200}
+
+    :return:
+    :rtype:
+    """
+
+    hdl_val = int(hdl_value)
+    answer = "the hdl value is " + hdl_eval(hdl_val)
+    return jsonify(answer), 201
+
+
 @app.route("/say_hello/<input_name>", methods=["GET"])
 def say_hello(input_name):
     return "Hello {}".format(input_name)
