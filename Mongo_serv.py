@@ -80,7 +80,6 @@ def add_test_result(patient, in_data):
     test_data_to_add = (in_data["test_name"])
 
 
-
 if __name__ == "__main__":
     initialize_server()
     app.run()
