@@ -55,7 +55,7 @@ def design_window():
     id_entry_box.grid(column=1, row=2, columnspan=2, sticky="w")
 
     blood_letter_data = tk.StringVar()
-
+    blood_letter_data.set('AB')
     ttk.Radiobutton(root, text="A", variable=blood_letter_data,
 
                     value="A").grid(column=0, row=3, sticky=tk.W)
@@ -70,15 +70,20 @@ def design_window():
 
     ttk.Radiobutton(root, text="O", variable=blood_letter_data,
 
-                    value=")").grid(column=0, row=6, sticky=tk.W)
+                    value="O").grid(column=0, row=6, sticky=tk.W)
 
     rh_data = tk.StringVar()
-
+    rh_data.set('-')
     rh_checkbox = ttk.Checkbutton(root, text="Rh Positive",
-
                                   variable=rh_data, onvalue="+", offvalue="-")
 
     rh_checkbox.grid(column=1, row=4)
+
+    ttk.Label(root, text="Nearest Donation Center").grid(column=3, row=0)
+
+    donation_center_data = tk.StringVar()
+    combo_box = ttk.Combobox(root, textvariable=donation_center_data)
+    combo_box.grid(column=3, row=1)
 
     ok_button = ttk.Button(root, text="Ok", command=ok_button_cmd)
 
